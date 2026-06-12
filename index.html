@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Granato Co. — Salesforce Consulting That Doesn't Bore You</title>
+  <meta name="description" content="Granato Co. builds Salesforce infrastructure, custom apps with beautiful UI, and helpful AI agents. Salesforce consulting, but make it fun." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo">
+        <span class="nav__logo-cloud">☁️</span>
+        Granato&nbsp;Co<span class="nav__logo-dot">.</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#services">What we do</a>
+        <a href="#process">How we work</a>
+        <a href="#why">Why us</a>
+        <a href="#contact" class="btn btn--small btn--primary">Let's build ✨</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__decor" aria-hidden="true">
+        <span class="float float--cloud1">☁️</span>
+        <span class="float float--cloud2">☁️</span>
+        <span class="float float--bolt">⚡</span>
+        <span class="float float--spark">✦</span>
+        <span class="float float--robot">🤖</span>
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__copy reveal">
+          <span class="sticker sticker--tilt-l">Salesforce consulting, but make it <em>fun</em> 🎉</span>
+          <h1 class="hero__title">
+            We build Salesforce stuff people
+            <span class="squiggle">actually&nbsp;love</span>
+            using.
+          </h1>
+          <p class="hero__sub">
+            Rock-solid org infrastructure. Custom apps with UI that doesn't make your
+            team cry. AI agents that genuinely help. That's the Granato&nbsp;Co. way.
+          </p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--primary btn--big">Start a project 🚀</a>
+            <a href="#services" class="btn btn--ghost btn--big">See what we do</a>
+          </div>
+          <p class="hero__hint">↓ scroll for the good stuff ↓</p>
+        </div>
+
+        <!-- Fake AI agent chat — shows off what we build -->
+        <div class="hero__demo reveal reveal--delay">
+          <div class="chat" id="chatDemo">
+            <div class="chat__bar">
+              <span class="chat__dot chat__dot--r"></span>
+              <span class="chat__dot chat__dot--y"></span>
+              <span class="chat__dot chat__dot--g"></span>
+              <span class="chat__title">⚡ Granato Agent · live in your org</span>
+            </div>
+            <div class="chat__body" id="chatBody"></div>
+            <div class="chat__input">
+              <span>Ask your org anything…</span>
+              <button class="chat__send" aria-hidden="true" tabindex="-1">➤</button>
+            </div>
+          </div>
+          <span class="sticker sticker--demo">built with Agentforce 🤝</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>CUSTOM APPS ✦ AI AGENTS ✦ LIGHTNING WEB COMPONENTS ✦ FLOWS ✦ APEX ✦ AGENTFORCE ✦ INTEGRATIONS ✦ DATA CLOUD ✦ ORG HEALTH ✦&nbsp;</span>
+        <span>CUSTOM APPS ✦ AI AGENTS ✦ LIGHTNING WEB COMPONENTS ✦ FLOWS ✦ APEX ✦ AGENTFORCE ✦ INTEGRATIONS ✦ DATA CLOUD ✦ ORG HEALTH ✦&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section" id="services">
+      <div class="section__head reveal">
+        <span class="sticker sticker--tilt-r">the menu 🍽️</span>
+        <h2>What we cook up</h2>
+        <p>Everything your org needs, none of the consulting-speak.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card card--yellow reveal">
+          <div class="card__icon">🏗️</div>
+          <h3>Org Infrastructure</h3>
+          <p>Scalable data models, clean security, environments that don't fall over. We build Salesforce foundations you can stack a business on.</p>
+          <ul>
+            <li>Architecture &amp; data modeling</li>
+            <li>Security &amp; permissions done right</li>
+            <li>DevOps, sandboxes &amp; CI/CD</li>
+          </ul>
+        </article>
+
+        <article class="card card--coral reveal">
+          <div class="card__icon">🎨</div>
+          <h3>Custom Apps &amp; UI</h3>
+          <p>Lightning Web Components and custom apps with interfaces so nice, your team will forget they're in Salesforce.</p>
+          <ul>
+            <li>Pixel-perfect LWC builds</li>
+            <li>Internal tools &amp; portals</li>
+            <li>UX that boosts adoption</li>
+          </ul>
+        </article>
+
+        <article class="card card--blue reveal">
+          <div class="card__icon">🤖</div>
+          <h3>Helpful AI Agents</h3>
+          <p>Agentforce and custom AI agents that answer questions, crunch records, and handle the busywork — so your humans can do human things.</p>
+          <ul>
+            <li>Agentforce setup &amp; tuning</li>
+            <li>Custom agent actions</li>
+            <li>AI that knows your data</li>
+          </ul>
+        </article>
+
+        <article class="card card--green reveal">
+          <div class="card__icon">⚡</div>
+          <h3>Automation &amp; Flows</h3>
+          <p>Flows, Apex, and integrations that quietly do the boring stuff in the background. Set it, forget it, smile.</p>
+          <ul>
+            <li>Flow builds &amp; rescues</li>
+            <li>Apex when it counts</li>
+            <li>API &amp; system integrations</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section class="section section--dark" id="process">
+      <div class="section__head reveal">
+        <span class="sticker sticker--tilt-l">no mystery meat 🔍</span>
+        <h2>How we work</h2>
+        <p>Four steps. Zero 80-slide decks.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num">01</span>
+          <h3>Listen 👂</h3>
+          <p>We dig into your org, your team, and what's actually slowing you down. No assumptions, no copy-paste solutions.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">02</span>
+          <h3>Sketch ✏️</h3>
+          <p>You get a clear plan with real scope, honest timelines, and pictures — because everyone likes pictures.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">03</span>
+          <h3>Build 🔨</h3>
+          <p>We ship in short cycles you can see and click. Feedback early, surprises never.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">04</span>
+          <h3>High-five 🙌</h3>
+          <p>Launch, training, docs, and support. We stick around until your team says "ohhh, nice."</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section class="section" id="why">
+      <div class="section__head reveal">
+        <span class="sticker sticker--tilt-r">humble brag 💪</span>
+        <h2>Why Granato Co.?</h2>
+        <p>Because "it technically works" isn't the bar.</p>
+      </div>
+
+      <div class="why">
+        <div class="why__stats reveal">
+          <div class="stat">
+            <span class="stat__num" data-count="100" data-suffix="%">0%</span>
+            <span class="stat__label">custom-built, never copy-paste</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="24" data-suffix="/7">0/7</span>
+            <span class="stat__label">your AI agents on the clock</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="0" data-suffix="">0</span>
+            <span class="stat__label">boring slide decks, ever</span>
+          </div>
+        </div>
+
+        <div class="why__points">
+          <div class="point reveal">
+            <span class="point__emoji">🎯</span>
+            <div>
+              <h3>Builders, not box-checkers</h3>
+              <p>We're hands-on-keyboard people who love crafting things in Salesforce — not account managers reading from a script.</p>
+            </div>
+          </div>
+          <div class="point reveal">
+            <span class="point__emoji">💅</span>
+            <div>
+              <h3>Design-obsessed</h3>
+              <p>If the UI is ugly, people won't use it — and then what was the point? We sweat the pixels so adoption takes care of itself.</p>
+          </div>
+          </div>
+          <div class="point reveal">
+            <span class="point__emoji">🗣️</span>
+            <div>
+              <h3>Plain English, always</h3>
+              <p>We explain everything like a friend would, not like a 200-page statement of work. You'll always know what's happening and why.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta" id="contact">
+      <div class="cta__card reveal">
+        <span class="cta__cloud" aria-hidden="true">☁️</span>
+        <h2>Got a Salesforce headache?<br />Let's turn it into a high-five.</h2>
+        <p>Tell us what's bugging you — a clunky org, an app idea, an AI agent dream. We'll reply like humans, fast.</p>
+        <a class="btn btn--big btn--light" href="mailto:jgranato6549@gmail.com?subject=Let's%20build%20something%20great%20%F0%9F%9A%80">
+          Say hello 👋 jgranato6549@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__logo">☁️ Granato Co.</span>
+      <span class="footer__tag">Salesforce infrastructure · Custom apps · AI agents</span>
+      <span class="footer__copy">© <span id="year"></span> Granato Co. Made with ⚡ and too much coffee.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
