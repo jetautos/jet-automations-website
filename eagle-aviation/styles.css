@@ -226,17 +226,21 @@ a:hover { color: var(--accent-dark); }
     url("assets/pleasanton-airport.webp");
   background-size: cover;
   background-position: center 40%;
+  padding-top: 6.5rem;
   padding-bottom: 8rem;
 }
 
 .hero.has-photo .hero-scene { display: none; }
 
 /* On wide screens, oversize the photo and pin its left edge so the runway
-   sits right of center, away from the headline text. */
+   sits right of center, away from the headline text. Extra top padding
+   starts the text below the treeline in the photo. */
 @media (min-width: 900px) {
   .hero.has-photo {
     background-size: 145% auto;
     background-position: 0% 45%;
+    padding-top: 11rem;
+    padding-bottom: 6rem;
   }
 }
 
