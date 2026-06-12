@@ -377,6 +377,8 @@ a:hover { color: var(--accent-dark); }
   margin-top: 0.5rem;
 }
 
+.photo-figure-compact { max-width: 820px; }
+
 /* ---------- About / credentials ---------- */
 
 #about {
