@@ -41,11 +41,13 @@ build command, publish directory `eagle-aviation`, CNAME `www` to
 2. **Contact info** — in the footer of `index.html`, find the
    `CONTACT INFO` comment and uncomment/fill in the real phone and email.
 
-## Hero photo
+## Photos
 
-The hero background photo lives at `assets/pleasanton-airport.webp` (short
-final for runway 34 at KPEZ). `script.js` detects it and applies it with a
-navy overlay; if the file is removed, the illustrated runway scene is the
-fallback. To swap it, replace the file (keep the same name, or update the
-path in `script.js` and `styles.css`). Use a photo you have rights to, and
-keep it reasonably small so the page stays fast.
+Four client-provided aerials of KPEZ live in `assets/`, one per section:
+`pleasanton-airport.webp` is the hero background (runway 34 threshold —
+applied by `script.js` with a navy overlay, falling back to the illustrated
+runway scene if removed); `pleasanton-ramp.webp` sits in the Flight Training
+section; `pleasanton-airport-ramp.webp` illustrates the airport expansion
+section; and `pleasanton-runway16.webp` is the dark background behind the
+lead form. To swap any, replace the file with the same name (WebP, roughly
+1600px wide or less keeps the page fast). Use only photos you have rights to.
