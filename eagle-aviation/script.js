@@ -28,13 +28,13 @@ document.querySelectorAll('a[data-interest]').forEach((link) => {
   });
 });
 
-// Hero photo: if assets/pleasanton-airport.jpg exists, use it as the hero
+// Hero photo: if assets/pleasanton-airport.webp exists, use it as the hero
 // background (styled in styles.css); otherwise the SVG runway scene stays.
 const heroPhoto = new Image();
 heroPhoto.onload = () => {
   document.querySelector('.hero').classList.add('has-photo');
 };
-heroPhoto.src = 'assets/pleasanton-airport.jpg';
+heroPhoto.src = 'assets/pleasanton-airport.webp';
 
 // Guard: while the form action still holds the placeholder, block submission
 // so the live site never POSTs nowhere. This disables itself automatically

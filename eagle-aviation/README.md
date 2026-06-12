@@ -43,9 +43,9 @@ build command, publish directory `eagle-aviation`, CNAME `www` to
 
 ## Hero photo
 
-When a file exists at `assets/pleasanton-airport.jpg`, the site automatically
-uses it as the hero background with a navy overlay (handled by `script.js` +
-`styles.css`); without it, the illustrated runway scene is the fallback. Use a
-photo you have rights to — one of Clint's own photos of the field is ideal.
-Resize to roughly 1600–2000px wide and save as JPEG to keep the page fast.
-Avoid images found via web search; they are almost always copyrighted.
+The hero background photo lives at `assets/pleasanton-airport.webp` (short
+final for runway 34 at KPEZ). `script.js` detects it and applies it with a
+navy overlay; if the file is removed, the illustrated runway scene is the
+fallback. To swap it, replace the file (keep the same name, or update the
+path in `script.js` and `styles.css`). Use a photo you have rights to, and
+keep it reasonably small so the page stays fast.

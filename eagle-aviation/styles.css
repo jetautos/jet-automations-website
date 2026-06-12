@@ -212,15 +212,15 @@ a:hover { color: var(--accent-dark); }
 
 .hero-inner { position: relative; z-index: 1; }
 
-/* Photo background — applied by script.js once assets/pleasanton-airport.jpg
+/* Photo background — applied by script.js once assets/pleasanton-airport.webp
    loads. Navy overlay keeps the white text readable over the photo. */
 .hero.has-photo {
   background-image:
-    linear-gradient(170deg, rgba(11, 29, 49, 0.82) 0%, rgba(11, 29, 49, 0.68) 100%),
-    url("assets/pleasanton-airport.jpg");
+    linear-gradient(180deg, rgba(11, 29, 49, 0.9) 0%, rgba(11, 29, 49, 0.62) 55%, rgba(11, 29, 49, 0.3) 100%),
+    url("assets/pleasanton-airport.webp");
   background-size: cover;
-  background-position: center 35%;
-  padding-bottom: 7rem;
+  background-position: center 40%;
+  padding-bottom: 8rem;
 }
 
 .hero.has-photo .hero-scene { display: none; }
