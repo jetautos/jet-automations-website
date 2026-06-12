@@ -231,6 +231,15 @@ a:hover { color: var(--accent-dark); }
 
 .hero.has-photo .hero-scene { display: none; }
 
+/* On wide screens, oversize the photo and pin its left edge so the runway
+   sits right of center, away from the headline text. */
+@media (min-width: 900px) {
+  .hero.has-photo {
+    background-size: 145% auto;
+    background-position: 0% 45%;
+  }
+}
+
 @media (max-width: 600px) {
   .hero { padding-bottom: 9rem; }
 }
