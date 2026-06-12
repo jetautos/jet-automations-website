@@ -40,6 +40,10 @@
   <main id="top">
 
     <!-- ============ HERO ============ -->
+    <!-- HERO PHOTO: when a photo exists at assets/pleasanton-airport.jpg,
+         script.js detects it and uses it as the hero background (with a navy
+         overlay for legibility), hiding the illustrated runway scene below.
+         Without the file, the illustration is the fallback. -->
     <section class="hero">
       <svg class="hero-scene" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
         <!-- distant terrain + horizon -->
@@ -140,22 +144,6 @@
           Eagle Aviation trains at Pleasanton Municipal Airport, a city-owned field
           south of San Antonio — and one in the middle of a major expansion.
         </p>
-
-        <!-- AIRPORT PHOTO: drop a photo at assets/pleasanton-airport.jpg and it
-             appears here automatically (the figure hides itself while the file
-             is missing). Good no-cost sources:
-             - A real photo from Clint of the field or his aircraft (best option).
-             - Public-domain USDA photos taken at the airport's 2025 hangar
-               groundbreaking (U.S. government works, no copyright):
-               https://www.flickr.com/photos/usdagov/54564317668/
-               https://www.flickr.com/photos/usdagov/54564272179/
-             Resize to ~1600px wide, save as assets/pleasanton-airport.jpg, and
-             update the caption below to describe the actual photo. -->
-        <figure class="airport-photo">
-          <img src="assets/pleasanton-airport.jpg" alt="Pleasanton Municipal Airport" loading="lazy"
-               onerror="this.closest('figure').style.display='none'">
-          <figcaption>Pleasanton Municipal Airport (KPEZ)</figcaption>
-        </figure>
 
         <div class="card-grid">
           <div class="card">

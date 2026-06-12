@@ -41,16 +41,11 @@ build command, publish directory `eagle-aviation`, CNAME `www` to
 2. **Contact info** — in the footer of `index.html`, find the
    `CONTACT INFO` comment and uncomment/fill in the real phone and email.
 
-## Optional: airport photo
+## Hero photo
 
-The "A growing home field" section has a photo slot that hides itself until a
-file exists at `assets/pleasanton-airport.jpg` — drop a photo in and it
-appears automatically. The best source is a real photo from Clint of the field
-or his aircraft. A no-cost alternative: the USDA published public-domain
-photos (U.S. government works, no copyright) taken at the airport's 2025
-hangar groundbreaking —
-<https://www.flickr.com/photos/usdagov/54564317668/> and
-<https://www.flickr.com/photos/usdagov/54564272179/>. Download, resize to
-roughly 1600px wide, save as `assets/pleasanton-airport.jpg`, and update the
-`<figcaption>` in `index.html` to describe the actual photo. Do not use
-images found via web search — they are almost always copyrighted.
+When a file exists at `assets/pleasanton-airport.jpg`, the site automatically
+uses it as the hero background with a navy overlay (handled by `script.js` +
+`styles.css`); without it, the illustrated runway scene is the fallback. Use a
+photo you have rights to — one of Clint's own photos of the field is ideal.
+Resize to roughly 1600–2000px wide and save as JPEG to keep the page fast.
+Avoid images found via web search; they are almost always copyrighted.

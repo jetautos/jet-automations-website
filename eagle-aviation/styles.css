@@ -212,6 +212,19 @@ a:hover { color: var(--accent-dark); }
 
 .hero-inner { position: relative; z-index: 1; }
 
+/* Photo background — applied by script.js once assets/pleasanton-airport.jpg
+   loads. Navy overlay keeps the white text readable over the photo. */
+.hero.has-photo {
+  background-image:
+    linear-gradient(170deg, rgba(11, 29, 49, 0.82) 0%, rgba(11, 29, 49, 0.68) 100%),
+    url("assets/pleasanton-airport.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  padding-bottom: 7rem;
+}
+
+.hero.has-photo .hero-scene { display: none; }
+
 @media (max-width: 600px) {
   .hero { padding-bottom: 9rem; }
 }
@@ -305,25 +318,6 @@ a:hover { color: var(--accent-dark); }
 
 @media (min-width: 760px) {
   .card-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* ---------- Airport / expansion ---------- */
-
-.airport-photo {
-  margin: 0 0 2.25rem;
-}
-
-.airport-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius);
-}
-
-.airport-photo figcaption {
-  font-size: 0.85rem;
-  color: var(--slate-600);
-  margin-top: 0.5rem;
 }
 
 /* ---------- About / credentials ---------- */
