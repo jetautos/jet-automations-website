@@ -3,253 +3,226 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Granato Co. — Salesforce Consulting That Doesn't Bore You</title>
-  <meta name="description" content="Granato Co. builds Salesforce infrastructure, custom apps with beautiful UI, and helpful AI agents. Salesforce consulting, but make it fun." />
+  <title>Granato Co. — Salesforce Consulting for Small Businesses &amp; Nonprofits · San Antonio, TX</title>
+  <meta name="description" content="Hands-on Salesforce consulting for small businesses and nonprofits. Org cleanup, automation, integrations, reports, AI agents, and fractional admin support — fixed scope, plain English. San Antonio, TX." />
+  <link rel="canonical" href="https://jadenngranato.com/" />
+  <meta property="og:title" content="Granato Co. — Salesforce that actually works for small organizations" />
+  <meta property="og:description" content="Cleanup, automation, reports, and ongoing admin support for small businesses and nonprofits on Salesforce — including NPSP." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jadenngranato.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23faf6f0'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='19' font-weight='600' fill='%23a8431f'%3EG%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== NAV ===== -->
-  <header class="nav" id="top">
-    <div class="nav__inner">
-      <a href="#top" class="nav__logo">
-        <span class="nav__logo-cloud">☁️</span>
-        Granato&nbsp;Co<span class="nav__logo-dot">.</span>
-      </a>
-      <nav class="nav__links" id="navLinks">
-        <a href="#services">What we do</a>
-        <a href="#process">How we work</a>
-        <a href="#why">Why us</a>
-        <a href="#contact" class="btn btn--small btn--primary">Let's build ✨</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#top" class="brand">Granato&nbsp;Co<span class="brand__mark">.</span></a>
+      <nav class="site-nav" aria-label="Main">
+        <button class="site-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          Menu
+        </button>
+        <ul class="site-nav__menu" id="navMenu">
+          <li><a href="#services">What I do</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#about">About</a></li>
+          <li>
+            <!-- TODO: swap mailto for Calendly link when ready -->
+            <a class="button button--solid button--small" href="mailto:jgranato6549@gmail.com?subject=Free%20Salesforce%20consult">Book a free consult</a>
+          </li>
+        </ul>
       </nav>
-      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <main>
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-      <div class="hero__decor" aria-hidden="true">
-        <span class="float float--cloud1">☁️</span>
-        <span class="float float--cloud2">☁️</span>
-        <span class="float float--bolt">⚡</span>
-        <span class="float float--spark">✦</span>
-        <span class="float float--robot">🤖</span>
-        <span class="blob blob--1"></span>
-        <span class="blob blob--2"></span>
-      </div>
-
-      <div class="hero__inner">
-        <div class="hero__copy reveal">
-          <span class="sticker sticker--tilt-l">Salesforce consulting, but make it <em>fun</em> 🎉</span>
-          <h1 class="hero__title">
-            We build Salesforce stuff people
-            <span class="squiggle">actually&nbsp;love</span>
-            using.
-          </h1>
-          <p class="hero__sub">
-            Rock-solid org infrastructure. Custom apps with UI that doesn't make your
-            team cry. AI agents that genuinely help. That's the Granato&nbsp;Co. way.
-          </p>
-          <div class="hero__cta">
-            <a href="#contact" class="btn btn--primary btn--big">Start a project 🚀</a>
-            <a href="#services" class="btn btn--ghost btn--big">See what we do</a>
-          </div>
-          <p class="hero__hint">↓ scroll for the good stuff ↓</p>
-        </div>
-
-        <!-- Fake AI agent chat — shows off what we build -->
-        <div class="hero__demo reveal reveal--delay">
-          <div class="chat" id="chatDemo">
-            <div class="chat__bar">
-              <span class="chat__dot chat__dot--r"></span>
-              <span class="chat__dot chat__dot--y"></span>
-              <span class="chat__dot chat__dot--g"></span>
-              <span class="chat__title">⚡ Granato Agent · live in your org</span>
-            </div>
-            <div class="chat__body" id="chatBody"></div>
-            <div class="chat__input">
-              <span>Ask your org anything…</span>
-              <button class="chat__send" aria-hidden="true" tabindex="-1">➤</button>
-            </div>
-          </div>
-          <span class="sticker sticker--demo">built with Agentforce 🤝</span>
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="kicker reveal">Salesforce consulting · San Antonio, TX</p>
+        <h1 class="hero__title reveal">
+          Salesforce that <em class="accent-underline">actually works</em><br class="br-desktop" />
+          for small businesses and nonprofits.
+        </h1>
+        <p class="hero__sub reveal">
+          I clean up messy orgs, automate the busywork, and build the reports you've
+          been wishing for — hands-on, fixed-scope, at a price a small team can justify.
+          Nonprofits on NPSP especially welcome.
+        </p>
+        <div class="hero__cta reveal">
+          <!-- TODO: swap mailto for Calendly link when ready -->
+          <a class="button button--solid" href="mailto:jgranato6549@gmail.com?subject=Free%20Salesforce%20consult">Book a free consult</a>
+          <span class="hero__cta-note">30 minutes. No pitch deck, no obligation.</span>
         </div>
       </div>
     </section>
 
-    <!-- ===== MARQUEE ===== -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>CUSTOM APPS ✦ AI AGENTS ✦ LIGHTNING WEB COMPONENTS ✦ FLOWS ✦ APEX ✦ AGENTFORCE ✦ INTEGRATIONS ✦ DATA CLOUD ✦ ORG HEALTH ✦&nbsp;</span>
-        <span>CUSTOM APPS ✦ AI AGENTS ✦ LIGHTNING WEB COMPONENTS ✦ FLOWS ✦ APEX ✦ AGENTFORCE ✦ INTEGRATIONS ✦ DATA CLOUD ✦ ORG HEALTH ✦&nbsp;</span>
-      </div>
-    </div>
-
-    <!-- ===== SERVICES ===== -->
+    <!-- ============ SERVICES ============ -->
     <section class="section" id="services">
-      <div class="section__head reveal">
-        <span class="sticker sticker--tilt-r">the menu 🍽️</span>
-        <h2>What we cook up</h2>
-        <p>Everything your org needs, none of the consulting-speak.</p>
-      </div>
+      <div class="container">
+        <p class="kicker reveal">What I do</p>
+        <h2 class="section__title reveal">Five things, done properly.</h2>
 
-      <div class="cards">
-        <article class="card card--yellow reveal">
-          <div class="card__icon">🏗️</div>
-          <h3>Org Infrastructure</h3>
-          <p>Scalable data models, clean security, environments that don't fall over. We build Salesforce foundations you can stack a business on.</p>
-          <ul>
-            <li>Architecture &amp; data modeling</li>
-            <li>Security &amp; permissions done right</li>
-            <li>DevOps, sandboxes &amp; CI/CD</li>
-          </ul>
-        </article>
-
-        <article class="card card--coral reveal">
-          <div class="card__icon">🎨</div>
-          <h3>Custom Apps &amp; UI</h3>
-          <p>Lightning Web Components and custom apps with interfaces so nice, your team will forget they're in Salesforce.</p>
-          <ul>
-            <li>Pixel-perfect LWC builds</li>
-            <li>Internal tools &amp; portals</li>
-            <li>UX that boosts adoption</li>
-          </ul>
-        </article>
-
-        <article class="card card--blue reveal">
-          <div class="card__icon">🤖</div>
-          <h3>Helpful AI Agents</h3>
-          <p>Agentforce and custom AI agents that answer questions, crunch records, and handle the busywork — so your humans can do human things.</p>
-          <ul>
-            <li>Agentforce setup &amp; tuning</li>
-            <li>Custom agent actions</li>
-            <li>AI that knows your data</li>
-          </ul>
-        </article>
-
-        <article class="card card--green reveal">
-          <div class="card__icon">⚡</div>
-          <h3>Automation &amp; Flows</h3>
-          <p>Flows, Apex, and integrations that quietly do the boring stuff in the background. Set it, forget it, smile.</p>
-          <ul>
-            <li>Flow builds &amp; rescues</li>
-            <li>Apex when it counts</li>
-            <li>API &amp; system integrations</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== PROCESS ===== -->
-    <section class="section section--dark" id="process">
-      <div class="section__head reveal">
-        <span class="sticker sticker--tilt-l">no mystery meat 🔍</span>
-        <h2>How we work</h2>
-        <p>Four steps. Zero 80-slide decks.</p>
-      </div>
-
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="step__num">01</span>
-          <h3>Listen 👂</h3>
-          <p>We dig into your org, your team, and what's actually slowing you down. No assumptions, no copy-paste solutions.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step__num">02</span>
-          <h3>Sketch ✏️</h3>
-          <p>You get a clear plan with real scope, honest timelines, and pictures — because everyone likes pictures.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step__num">03</span>
-          <h3>Build 🔨</h3>
-          <p>We ship in short cycles you can see and click. Feedback early, surprises never.</p>
-        </li>
-        <li class="step reveal">
-          <span class="step__num">04</span>
-          <h3>High-five 🙌</h3>
-          <p>Launch, training, docs, and support. We stick around until your team says "ohhh, nice."</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ===== WHY US ===== -->
-    <section class="section" id="why">
-      <div class="section__head reveal">
-        <span class="sticker sticker--tilt-r">humble brag 💪</span>
-        <h2>Why Granato Co.?</h2>
-        <p>Because "it technically works" isn't the bar.</p>
-      </div>
-
-      <div class="why">
-        <div class="why__stats reveal">
-          <div class="stat">
-            <span class="stat__num" data-count="100" data-suffix="%">0%</span>
-            <span class="stat__label">custom-built, never copy-paste</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num" data-count="24" data-suffix="/7">0/7</span>
-            <span class="stat__label">your AI agents on the clock</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num" data-count="0" data-suffix="">0</span>
-            <span class="stat__label">boring slide decks, ever</span>
-          </div>
-        </div>
-
-        <div class="why__points">
-          <div class="point reveal">
-            <span class="point__emoji">🎯</span>
-            <div>
-              <h3>Builders, not box-checkers</h3>
-              <p>We're hands-on-keyboard people who love crafting things in Salesforce — not account managers reading from a script.</p>
-            </div>
-          </div>
-          <div class="point reveal">
-            <span class="point__emoji">💅</span>
-            <div>
-              <h3>Design-obsessed</h3>
-              <p>If the UI is ugly, people won't use it — and then what was the point? We sweat the pixels so adoption takes care of itself.</p>
-          </div>
-          </div>
-          <div class="point reveal">
-            <span class="point__emoji">🗣️</span>
-            <div>
-              <h3>Plain English, always</h3>
-              <p>We explain everything like a friend would, not like a 200-page statement of work. You'll always know what's happening and why.</p>
-            </div>
-          </div>
+        <div class="services">
+          <article class="service reveal">
+            <span class="service__num">01</span>
+            <h3>Setup &amp; cleanup</h3>
+            <p>
+              For orgs that grew messy. Duplicate records, fields nobody remembers
+              creating, processes nobody trusts. I untangle it, fix what's broken,
+              and document how it all works.
+            </p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">02</span>
+            <h3>Automation &amp; integrations</h3>
+            <p>
+              Web forms that land in your CRM, payments that sync themselves, email
+              tools that finally talk to Salesforce. The copy-paste and manual
+              entry stop here.
+            </p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">03</span>
+            <h3>Reports &amp; dashboards</h3>
+            <p>
+              See your pipeline, donors, and renewals clearly — in dashboards your
+              team will actually open. If a number matters to your board, it should
+              be one click away.
+            </p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">04</span>
+            <h3>AI agents in Salesforce</h3>
+            <p>
+              Agentforce and custom AI agents that answer routine questions, draft
+              follow-ups, and handle the repetitive requests — scoped carefully to
+              your data, so they're genuinely helpful instead of a gimmick.
+            </p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">05</span>
+            <h3>Ongoing admin support</h3>
+            <p>
+              A fractional Salesforce admin on a simple monthly retainer. Questions
+              answered, changes made, users supported — without hiring full-time.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== CTA ===== -->
-    <section class="cta" id="contact">
-      <div class="cta__card reveal">
-        <span class="cta__cloud" aria-hidden="true">☁️</span>
-        <h2>Got a Salesforce headache?<br />Let's turn it into a high-five.</h2>
-        <p>Tell us what's bugging you — a clunky org, an app idea, an AI agent dream. We'll reply like humans, fast.</p>
-        <a class="btn btn--big btn--light" href="mailto:jgranato6549@gmail.com?subject=Let's%20build%20something%20great%20%F0%9F%9A%80">
-          Say hello 👋 jgranato6549@gmail.com
-        </a>
+    <!-- ============ PROOF ============ -->
+    <section class="section section--paper" id="results">
+      <div class="container">
+        <p class="kicker reveal">Results</p>
+        <h2 class="section__title reveal">Outcomes, not logos.</h2>
+
+        <!-- Placeholder proof copy — refine with real client details -->
+        <ul class="proof">
+          <li class="proof__item reveal">
+            <span class="proof__tag">Email deliverability</span>
+            <p>Diagnosed and fixed org-wide email deliverability for an <strong>8,900-member</strong> nonprofit — messages that had been silently bouncing now reach members.</p>
+          </li>
+          <li class="proof__item reveal">
+            <span class="proof__tag">Revenue recovery</span>
+            <p>Recovered <strong>$20K+</strong> in lapsed dues by building renewal automation that follows up so staff don't have to.</p>
+          </li>
+          <li class="proof__item reveal">
+            <span class="proof__tag">Automation</span>
+            <p>Built end-to-end membership automation — web form straight into the CRM, <strong>zero manual entry</strong>, no records falling through the cracks.</p>
+          </li>
+        </ul>
       </div>
     </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section" id="process">
+      <div class="container">
+        <p class="kicker reveal">How it works</p>
+        <h2 class="section__title reveal">Three steps. No surprise billing.</h2>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Free consult</h3>
+            <p>
+              Thirty minutes. You show me what's slow, broken, or confusing; I tell
+              you honestly what it would take to fix — even if the answer is
+              "you don't need a consultant for this."
+            </p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">2</span>
+            <h3>Fixed-scope proposal</h3>
+            <p>
+              One short document: what gets built, what it costs, when it's done.
+              The price you approve is the price you pay. No hourly meter running
+              in the background.
+            </p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">3</span>
+            <h3>Build &amp; handoff</h3>
+            <p>
+              I do the work, walk your team through it, and leave you plain-English
+              documentation. Ongoing support if you want it — never lock-in.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--paper" id="about">
+      <div class="container about">
+        <div class="about__photo reveal" role="img" aria-label="Photo of Jaden Granato, founder of Granato Co.">
+          <!-- TODO: replace with real headshot -->
+          <span class="about__initials" aria-hidden="true">JG</span>
+        </div>
+        <div class="about__text">
+          <p class="kicker reveal">About</p>
+          <h2 class="section__title reveal">You talk to the person doing the work.</h2>
+          <p class="reveal">
+            I'm Jaden Granato — founder of Granato Co. LLC, based in San Antonio,
+            Salesforce Certified, and the day-to-day admin and developer for a
+            national nonprofit. That's the point of working with a solo practice:
+            no account managers, no hand-offs to a junior team. The person you meet
+            on the first call is the person who builds your solution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / FOOTER ============ -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer__cta">
+          <p class="kicker kicker--light reveal">Ready when you are</p>
+          <h2 class="footer__title reveal">Let's look at your org together.</h2>
+          <div class="reveal">
+            <!-- TODO: swap mailto for Calendly link when ready -->
+            <a class="button button--light" href="mailto:jgranato6549@gmail.com?subject=Free%20Salesforce%20consult">Book a free consult</a>
+          </div>
+        </div>
+
+        <div class="footer__info">
+          <ul class="footer__contact">
+            <li><a href="mailto:jgranato6549@gmail.com">jgranato6549@gmail.com</a></li>
+            <li><a href="tel:+12109714406">210-971-4406</a></li>
+            <!-- TODO: confirm LinkedIn URL -->
+            <li><a href="https://www.linkedin.com/in/jadengranato" rel="noopener" target="_blank">LinkedIn</a></li>
+          </ul>
+          <p class="footer__legal">Granato Co. LLC · San Antonio, TX · © <span id="year"></span></p>
+        </div>
+      </div>
+    </footer>
   </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <span class="footer__logo">☁️ Granato Co.</span>
-      <span class="footer__tag">Salesforce infrastructure · Custom apps · AI agents</span>
-      <span class="footer__copy">© <span id="year"></span> Granato Co. Made with ⚡ and too much coffee.</span>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
