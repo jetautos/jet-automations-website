@@ -7,9 +7,10 @@ JS — no frameworks, no build step, no backend. The whole site is this folder.
 
 ```
 eagle-aviation/
-├── index.html   # the entire site (hero, training, about, VMAX, lead form, footer)
+├── index.html   # the entire site (hero, training, airport, about, VMAX, lead form, footer)
 ├── styles.css   # mobile-first styles, system fonts only, no external assets
 ├── script.js    # mobile nav, interest-dropdown preselect, form placeholder guard
+├── assets/      # drop pleasanton-airport.jpg here (see below)
 └── README.md
 ```
 
@@ -39,3 +40,17 @@ build command, publish directory `eagle-aviation`, CNAME `www` to
    `script.js` blocks submission and shows a "not connected yet" notice.
 2. **Contact info** — in the footer of `index.html`, find the
    `CONTACT INFO` comment and uncomment/fill in the real phone and email.
+
+## Optional: airport photo
+
+The "A growing home field" section has a photo slot that hides itself until a
+file exists at `assets/pleasanton-airport.jpg` — drop a photo in and it
+appears automatically. The best source is a real photo from Clint of the field
+or his aircraft. A no-cost alternative: the USDA published public-domain
+photos (U.S. government works, no copyright) taken at the airport's 2025
+hangar groundbreaking —
+<https://www.flickr.com/photos/usdagov/54564317668/> and
+<https://www.flickr.com/photos/usdagov/54564272179/>. Download, resize to
+roughly 1600px wide, save as `assets/pleasanton-airport.jpg`, and update the
+`<figcaption>` in `index.html` to describe the actual photo. Do not use
+images found via web search — they are almost always copyrighted.

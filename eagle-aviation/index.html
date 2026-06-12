@@ -28,6 +28,7 @@
       </button>
       <nav id="site-nav" class="site-nav">
         <a href="#training">Training</a>
+        <a href="#airport">Airport</a>
         <a href="#about">About</a>
         <a href="#vmax">VMAX</a>
         <a href="#contact">Contact</a>
@@ -40,6 +41,37 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
+      <svg class="hero-scene" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <!-- distant terrain + horizon -->
+        <rect x="0" y="236" width="1440" height="2" fill="#2c4a6b" opacity="0.55"/>
+        <rect x="0" y="238" width="1440" height="122" fill="#0a1a2c"/>
+        <!-- runway -->
+        <polygon points="660,238 780,238 1080,360 360,360" fill="#0e2440"/>
+        <polygon points="660,238 667,238 382,360 360,360" fill="#9fb3c8" opacity="0.22"/>
+        <polygon points="773,238 780,238 1080,360 1058,360" fill="#9fb3c8" opacity="0.22"/>
+        <!-- centerline -->
+        <g fill="#c9d6e2" opacity="0.45">
+          <polygon points="718,250 722,250 723,262 717,262"/>
+          <polygon points="716,272 724,272 726,290 714,290"/>
+          <polygon points="713,304 727,304 730,330 710,330"/>
+          <polygon points="709,344 731,344 734,360 706,360"/>
+        </g>
+        <!-- edge lights -->
+        <g fill="#d9822b" opacity="0.85">
+          <circle cx="615" cy="256" r="2"/>
+          <circle cx="540" cy="287" r="2.4"/>
+          <circle cx="450" cy="323" r="2.8"/>
+          <circle cx="375" cy="354" r="3.2"/>
+          <circle cx="825" cy="256" r="2"/>
+          <circle cx="900" cy="287" r="2.4"/>
+          <circle cx="990" cy="323" r="2.8"/>
+          <circle cx="1065" cy="354" r="3.2"/>
+        </g>
+        <!-- departing aircraft -->
+        <g transform="translate(1010,70) rotate(-18) scale(2.4)">
+          <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="#e8eef4" opacity="0.8"/>
+        </g>
+      </svg>
       <div class="container hero-inner">
         <p class="hero-kicker">Pleasanton Municipal Airport (KPEZ) &middot; Pleasanton, Texas</p>
         <h1>Learn to fly in Pleasanton.</h1>
@@ -59,6 +91,7 @@
     <!-- ============ FLIGHT TRAINING ============ -->
     <section id="training" class="section">
       <div class="container">
+        <p class="kicker">Learn to fly</p>
         <h2>Flight Training</h2>
         <p class="section-lead">
           Whether you want to fly for fun, for work, or as the first step toward a
@@ -98,9 +131,74 @@
       </div>
     </section>
 
-    <!-- ============ ABOUT CLINT ============ -->
-    <section id="about" class="section section-dark">
+    <!-- ============ AIRPORT & EXPANSION ============ -->
+    <section id="airport" class="section section-dark">
       <div class="container">
+        <p class="kicker">Pleasanton Municipal Airport &middot; KPEZ</p>
+        <h2>A growing home field</h2>
+        <p class="section-lead">
+          Eagle Aviation trains at Pleasanton Municipal Airport, a city-owned field
+          south of San Antonio — and one in the middle of a major expansion.
+        </p>
+
+        <!-- AIRPORT PHOTO: drop a photo at assets/pleasanton-airport.jpg and it
+             appears here automatically (the figure hides itself while the file
+             is missing). Good no-cost sources:
+             - A real photo from Clint of the field or his aircraft (best option).
+             - Public-domain USDA photos taken at the airport's 2025 hangar
+               groundbreaking (U.S. government works, no copyright):
+               https://www.flickr.com/photos/usdagov/54564317668/
+               https://www.flickr.com/photos/usdagov/54564272179/
+             Resize to ~1600px wide, save as assets/pleasanton-airport.jpg, and
+             update the caption below to describe the actual photo. -->
+        <figure class="airport-photo">
+          <img src="assets/pleasanton-airport.jpg" alt="Pleasanton Municipal Airport" loading="lazy"
+               onerror="this.closest('figure').style.display='none'">
+          <figcaption>Pleasanton Municipal Airport (KPEZ)</figcaption>
+        </figure>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>499 Acres Acquired</h3>
+            <p>
+              The City of Pleasanton has purchased roughly 499 acres adjacent to the
+              field to make room for a major airport expansion.
+            </p>
+          </div>
+          <div class="card">
+            <h3>An Expanded Runway</h3>
+            <p>
+              The centerpiece of the plan is a realigned, expanded runway, developed
+              with TxDOT Aviation using state and federal funds — a project the city
+              estimates at around $44 million.
+            </p>
+          </div>
+          <div class="card">
+            <h3>New Hangars &amp; Fuel Farm</h3>
+            <p>
+              Federal investment is already on the ground, with recent groundbreakings
+              for a new fuel farm and a hangar with space for up to eight aircraft,
+              backed by $1.71 million in USDA funding.
+            </p>
+          </div>
+        </div>
+        <p class="section-note">
+          A growing field means more aircraft, more hangar space, and more room to
+          train. <a href="#contact">Get started</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT CLINT ============ -->
+    <section id="about" class="section">
+      <svg class="compass" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        <polygon points="100,18 106,100 100,182 94,100" fill="currentColor"/>
+        <polygon points="18,100 100,94 182,100 100,106" fill="currentColor"/>
+      </svg>
+      <div class="container">
+        <p class="kicker">Your instructor</p>
         <h2>About Clint Powell</h2>
         <div class="about-grid">
           <div class="about-text">
@@ -155,8 +253,9 @@
     </section>
 
     <!-- ============ VMAX ============ -->
-    <section id="vmax" class="section">
+    <section id="vmax" class="section section-dark">
       <div class="container">
+        <p class="kicker">National initiative</p>
         <h2>The VMAX Program</h2>
         <p class="section-lead">
           Clint is the chief pilot and architect of VMAX, a national initiative training
@@ -175,6 +274,7 @@
     <!-- ============ LEAD FORM ============ -->
     <section id="contact" class="section section-contact">
       <div class="container container-narrow">
+        <p class="kicker kicker-light">Get in touch</p>
         <h2>Start Your Training</h2>
         <p class="section-lead">
           Tell us a little about yourself and what you're interested in, and we'll get
@@ -274,6 +374,7 @@
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#training">Training</a>
+        <a href="#airport">Airport</a>
         <a href="#about">About</a>
         <a href="#vmax">VMAX</a>
         <a href="#contact">Contact</a>

@@ -192,9 +192,28 @@ a:hover { color: var(--accent-dark); }
 /* ---------- Hero ---------- */
 
 .hero {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(170deg, var(--navy-800) 0%, var(--navy-900) 70%);
   color: var(--white);
-  padding: 5rem 0 5.5rem;
+  padding: 5rem 0 11rem;
+}
+
+.hero-scene {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(170px, 25vw, 360px);
+  display: block;
+  pointer-events: none;
+}
+
+.hero-inner { position: relative; z-index: 1; }
+
+@media (max-width: 600px) {
+  .hero { padding-bottom: 9rem; }
 }
 
 .hero h1 { color: var(--white); margin-bottom: 1rem; }
@@ -242,6 +261,27 @@ a:hover { color: var(--accent-dark); }
   color: var(--slate-600);
 }
 
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 0.6rem;
+}
+
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 2px;
+  background: var(--accent);
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+.kicker-light { color: var(--slate-300); }
+
 /* ---------- Training cards ---------- */
 
 .card-grid {
@@ -253,6 +293,7 @@ a:hover { color: var(--accent-dark); }
 .card {
   background: var(--paper);
   border: 1px solid #e3e9ef;
+  border-top: 3px solid var(--accent);
   border-radius: var(--radius);
   padding: 1.5rem;
 }
@@ -266,7 +307,44 @@ a:hover { color: var(--accent-dark); }
   .card-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* ---------- Airport / expansion ---------- */
+
+.airport-photo {
+  margin: 0 0 2.25rem;
+}
+
+.airport-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.airport-photo figcaption {
+  font-size: 0.85rem;
+  color: var(--slate-600);
+  margin-top: 0.5rem;
+}
+
 /* ---------- About / credentials ---------- */
+
+#about {
+  position: relative;
+  overflow: hidden;
+}
+
+.compass {
+  position: absolute;
+  right: -60px;
+  top: 30px;
+  width: 360px;
+  height: 360px;
+  color: var(--navy-800);
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+#about .container { position: relative; }
 
 .about-grid {
   display: grid;
@@ -282,7 +360,7 @@ a:hover { color: var(--accent-dark); }
 }
 
 .cred-block {
-  background: var(--white);
+  background: var(--paper);
   border: 1px solid #e3e9ef;
   border-radius: var(--radius);
   padding: 1.25rem 1.5rem;
@@ -443,7 +521,9 @@ a:hover { color: var(--accent-dark); }
 .footer-nav a:hover { color: var(--white); }
 
 .footer-legal {
-  margin: 0;
+  margin: 0.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--navy-700);
   font-size: 0.85rem;
   color: var(--slate-600);
 }
