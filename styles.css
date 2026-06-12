@@ -189,10 +189,12 @@ a { color: var(--rust-deep); }
   flex-wrap: wrap;
   gap: 1.2rem;
 }
-.hero__cta-note {
+.hero__trust {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
   color: var(--ink-soft);
+  margin-top: 1.7rem;
 }
 
 /* ---------- Sections ---------- */
@@ -205,6 +207,13 @@ a { color: var(--rust-deep); }
 .section__title {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   margin-bottom: 2.8rem;
+}
+.section__lede {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  line-height: 1.45;
+  max-width: 30rem;
+  margin: -1.6rem 0 3rem;
 }
 
 /* ---------- Services ---------- */
@@ -251,6 +260,19 @@ a { color: var(--rust-deep); }
 }
 .proof__item strong { color: var(--rust-deep); font-weight: 600; }
 
+.proof__cta {
+  margin-top: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.6rem;
+}
+.proof__cta p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+}
+
 /* ---------- Steps ---------- */
 .steps {
   list-style: none;
@@ -271,6 +293,19 @@ a { color: var(--rust-deep); }
 .step h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
 .step p { color: var(--ink-soft); font-size: 1rem; }
 
+.process-note {
+  margin-top: 3.2rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  max-width: none;
+}
+.process-note em {
+  font-style: italic;
+  color: var(--rust);
+}
+
 /* ---------- About ---------- */
 .about {
   display: grid;
@@ -279,13 +314,20 @@ a { color: var(--rust-deep); }
   align-items: center;
 }
 .about__photo {
-  width: 180px;
-  height: 200px;
+  width: 220px;
+  height: 264px;
   background: var(--cream);
   border: 1px solid var(--line);
   border-radius: 8px;
   display: grid;
   place-items: center;
+  overflow: hidden;
+}
+.about__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .about__initials {
   font-family: var(--font-serif);
@@ -348,7 +390,7 @@ a { color: var(--rust-deep); }
   .services { grid-template-columns: 1fr 1fr; column-gap: 3.5rem; }
   .steps { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
   .about { grid-template-columns: auto 1fr; gap: 3.5rem; }
-  .about__photo { width: 220px; height: 250px; }
+  .about__photo { width: 280px; height: 336px; }
 }
 
 /* ---------- Mobile nav ---------- */
