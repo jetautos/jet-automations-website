@@ -169,10 +169,16 @@ a:hover { color: var(--accent-dark); }
 
 .site-nav a:hover { color: var(--accent-dark); }
 
-.btn-nav {
+/* a.btn-nav needed to outrank the .site-nav a link color */
+.site-nav a.btn-nav {
   margin-top: 0.5rem;
   padding: 0.65rem 1.25rem;
   color: var(--white);
+}
+
+.site-nav a.btn-nav:hover {
+  color: var(--white);
+  background: var(--navy-700);
 }
 
 @media (min-width: 760px) {
@@ -186,7 +192,7 @@ a:hover { color: var(--accent-dark); }
     border: 0;
     padding: 0;
   }
-  .btn-nav { margin-top: 0; }
+  .site-nav a.btn-nav { margin-top: 0; }
 }
 
 /* ---------- Hero ---------- */
