@@ -236,9 +236,15 @@ a:hover { color: var(--accent-dark); }
    sits right of center, away from the headline text. Extra top padding
    starts the text below the treeline in the photo. */
 @media (min-width: 900px) {
+  /* Diagonal scrim: near-solid navy behind the text on the left, fading
+     out toward the runway so the trees don't compete with the headline. */
   .hero.has-photo {
-    background-size: 130% auto;
-    background-position: 0% 38%;
+    background-image:
+      linear-gradient(100deg, rgba(11, 29, 49, 0.94) 0%, rgba(11, 29, 49, 0.78) 42%, rgba(11, 29, 49, 0.3) 68%, rgba(11, 29, 49, 0.12) 100%),
+      linear-gradient(180deg, rgba(11, 29, 49, 0.5) 0%, rgba(11, 29, 49, 0.2) 55%, rgba(11, 29, 49, 0.08) 100%),
+      url("assets/pleasanton-airport.webp");
+    background-size: 100% 100%, 100% 100%, 130% auto;
+    background-position: 0 0, 0 0, 0% 38%;
     padding-top: 11rem;
     padding-bottom: 10rem;
   }
