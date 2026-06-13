@@ -271,6 +271,14 @@ a:hover { color: var(--accent-dark); }
   margin-top: 0.65rem;
 }
 
+/* On phones the wordmark wraps, so the subline reads better left-aligned */
+@media (max-width: 759px) {
+  .hero-brand-sub {
+    text-align: left;
+    padding-left: 0;
+  }
+}
+
 .hero-kicker {
   text-transform: uppercase;
   letter-spacing: 0.12em;
