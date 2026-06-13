@@ -239,7 +239,7 @@ a:hover { color: var(--accent-dark); }
       linear-gradient(180deg, rgba(11, 29, 49, 0.88) 0%, rgba(11, 29, 49, 0.48) 45%, rgba(11, 29, 49, 0.14) 100%),
       url("assets/pleasanton-airport.webp");
     background-size: cover;
-    background-position: center 28%;
+    background-position: left 40%;
     padding-top: 11rem;
     padding-bottom: 10rem;
   }
