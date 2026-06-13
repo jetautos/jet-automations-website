@@ -314,6 +314,14 @@ a:hover { color: var(--accent-dark); }
   color: var(--slate-600);
 }
 
+.section-note-lg {
+  font-size: 1.3rem;
+  line-height: 1.55;
+  color: var(--navy-800);
+  font-weight: 500;
+  max-width: 40rem;
+}
+
 .kicker {
   text-transform: uppercase;
   letter-spacing: 0.12em;
