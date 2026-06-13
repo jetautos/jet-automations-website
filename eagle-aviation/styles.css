@@ -333,8 +333,6 @@ a:hover { color: var(--accent-dark); }
   vertical-align: middle;
 }
 
-.kicker-light { color: var(--slate-300); }
-
 /* ---------- Training cards ---------- */
 
 .card-grid {
