@@ -257,7 +257,7 @@ a:hover { color: var(--accent-dark); }
     content: "";
     position: absolute;
     z-index: -1;
-    inset: -3.5rem -5rem;
+    inset: -3.5rem -5rem -0.75rem;
     background: radial-gradient(closest-side, rgba(11, 29, 49, 0.92) 0%, rgba(11, 29, 49, 0.65) 55%, rgba(11, 29, 49, 0) 100%);
   }
 }
@@ -274,7 +274,7 @@ a:hover { color: var(--accent-dark); }
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.04;
-  margin-bottom: 3.25rem;
+  margin-bottom: 2.25rem;
 }
 
 .hero-brand-sub {
