@@ -219,11 +219,13 @@ a:hover { color: var(--accent-dark); }
 .hero-inner { position: relative; z-index: 1; }
 
 /* Photo background — applied by script.js once assets/pleasanton-airport.webp
-   loads. A subtle, even navy overlay across the whole photo keeps the white
-   text readable while the runway and grass stay clearly visible. */
+   loads. Two overlays: an even navy base tint that deepens slightly toward
+   the bottom, plus a soft left-side darkening so the headline and body text
+   stand out while the runway on the right stays clear. */
 .hero.has-photo {
   background-image:
-    linear-gradient(180deg, rgba(11, 29, 49, 0.55) 0%, rgba(11, 29, 49, 0.42) 100%),
+    linear-gradient(to right, rgba(8, 22, 38, 0.6) 0%, rgba(8, 22, 38, 0.15) 70%, rgba(8, 22, 38, 0) 100%),
+    linear-gradient(180deg, rgba(11, 29, 49, 0.58) 0%, rgba(11, 29, 49, 0.5) 100%),
     url("assets/pleasanton-airport.webp");
   background-size: cover;
   background-position: center 40%;
@@ -238,10 +240,11 @@ a:hover { color: var(--accent-dark); }
 @media (min-width: 900px) {
   .hero.has-photo {
     background-image:
-      linear-gradient(180deg, rgba(11, 29, 49, 0.55) 0%, rgba(11, 29, 49, 0.42) 100%),
+      linear-gradient(to right, rgba(8, 22, 38, 0.62) 0%, rgba(8, 22, 38, 0.2) 55%, rgba(8, 22, 38, 0) 80%),
+      linear-gradient(180deg, rgba(11, 29, 49, 0.5) 0%, rgba(11, 29, 49, 0.42) 100%),
       url("assets/pleasanton-airport.webp");
-    background-size: 100% 100%, 132% auto;
-    background-position: 0 0, left 36%;
+    background-size: cover, cover, 132% auto;
+    background-position: 0 0, 0 0, left 36%;
     padding-top: 11rem;
     padding-bottom: 10rem;
   }
