@@ -219,10 +219,11 @@ a:hover { color: var(--accent-dark); }
 .hero-inner { position: relative; z-index: 1; }
 
 /* Photo background — applied by script.js once assets/pleasanton-airport.webp
-   loads. Navy overlay keeps the white text readable over the photo. */
+   loads. Left-to-right gradient keeps text readable while letting the runway
+   show through on the right. */
 .hero.has-photo {
   background-image:
-    linear-gradient(180deg, rgba(11, 29, 49, 0.9) 0%, rgba(11, 29, 49, 0.62) 55%, rgba(11, 29, 49, 0.3) 100%),
+    linear-gradient(to right, rgba(11, 29, 49, 0.92) 0%, rgba(11, 29, 49, 0.7) 50%, rgba(11, 29, 49, 0.35) 100%),
     url("assets/pleasanton-airport.webp");
   background-size: cover;
   background-position: center 40%;
@@ -232,33 +233,15 @@ a:hover { color: var(--accent-dark); }
 
 .hero.has-photo .hero-scene { display: none; }
 
-/* On wide screens, oversize the photo and pin its left edge so the runway
-   sits right of center, away from the headline text. Extra top padding
-   starts the text below the treeline in the photo. */
 @media (min-width: 900px) {
   .hero.has-photo {
     background-image:
-      linear-gradient(180deg, rgba(11, 29, 49, 0.6) 0%, rgba(11, 29, 49, 0.3) 55%, rgba(11, 29, 49, 0.12) 100%),
+      linear-gradient(to right, rgba(11, 29, 49, 0.92) 0%, rgba(11, 29, 49, 0.6) 42%, rgba(11, 29, 49, 0.12) 100%),
       url("assets/pleasanton-airport.webp");
-    background-size: 100% 100%, 130% auto;
-    background-position: 0 0, 0% 38%;
+    background-size: cover;
+    background-position: center 38%;
     padding-top: 11rem;
     padding-bottom: 10rem;
-  }
-
-  /* Soft navy halo behind just the wordmark so the treeline doesn't
-     compete with it; fades out on all sides. */
-  .hero.has-photo .hero-brand {
-    position: relative;
-    z-index: 0;
-  }
-
-  .hero.has-photo .hero-brand::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: -3.5rem -9rem -0.75rem;
-    background: radial-gradient(closest-side, rgba(11, 29, 49, 0.92) 0%, rgba(11, 29, 49, 0.72) 62%, rgba(11, 29, 49, 0) 100%);
   }
 }
 
