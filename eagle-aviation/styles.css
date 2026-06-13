@@ -251,18 +251,22 @@ a:hover { color: var(--accent-dark); }
 .hero h1 { color: var(--white); margin-bottom: 1rem; }
 
 .hero-brand {
+  width: fit-content;
   font-size: clamp(2.7rem, 7.5vw, 4.6rem);
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.04;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .hero-brand-sub {
   display: block;
+  text-align: center;
   font-size: clamp(1rem, 2.6vw, 1.45rem);
   font-weight: 700;
   letter-spacing: 0.42em;
+  /* offset the trailing letter-space so the glyphs center visually */
+  padding-left: 0.42em;
   color: var(--accent);
   margin-top: 0.65rem;
 }
@@ -279,8 +283,9 @@ a:hover { color: var(--accent-dark); }
 .hero-sub {
   max-width: 38rem;
   font-size: 1.15rem;
+  line-height: 1.75;
   color: #d6e0ea;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero-actions {
