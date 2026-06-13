@@ -358,6 +358,48 @@ a:hover { color: var(--accent-dark); }
   .card-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* ---------- Part 61 panel ---------- */
+
+.part61 {
+  margin-top: 2.25rem;
+  background: var(--navy-800);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  color: #d6e0ea;
+}
+
+.part61 h3 {
+  color: var(--white);
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.part61 > p {
+  max-width: 44rem;
+  margin-bottom: 1.5rem;
+}
+
+.part61-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem 2rem;
+  grid-template-columns: 1fr;
+}
+
+.part61-points li {
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
+.part61-points strong { color: var(--white); }
+
+@media (min-width: 760px) {
+  .part61 { padding: 2.5rem; }
+  .part61-points { grid-template-columns: 1fr 1fr; }
+}
+
 /* ---------- Photo figures ---------- */
 
 .photo-figure {
