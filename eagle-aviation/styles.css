@@ -237,10 +237,10 @@ a:hover { color: var(--accent-dark); }
    starts the text below the treeline in the photo. */
 @media (min-width: 900px) {
   .hero.has-photo {
-    background-size: 145% auto;
-    background-position: 0% 45%;
+    background-size: 130% auto;
+    background-position: 0% 38%;
     padding-top: 11rem;
-    padding-bottom: 6rem;
+    padding-bottom: 10rem;
   }
 }
 
