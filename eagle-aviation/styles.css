@@ -279,15 +279,6 @@ a:hover { color: var(--accent-dark); }
   }
 }
 
-.hero-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--slate-300);
-  margin-bottom: 1.25rem;
-}
-
 .hero-sub {
   max-width: 38rem;
   font-size: 1.15rem;
