@@ -399,6 +399,11 @@ a:hover { color: var(--accent-dark); }
     align-self: stretch;
   }
 
+  /* Drop the redundant price from the button on desktop so it stays on one
+     line and matches the other card button's height (price still shows on
+     mobile, and remains in the card heading and body either way). */
+  .card-btn-price { display: none; }
+
   /* Outline secondary pairs with the solid accent discovery button */
   .card-action .btn-primary.card-btn {
     background: transparent;
