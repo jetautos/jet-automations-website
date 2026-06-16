@@ -389,7 +389,27 @@ a:hover { color: var(--accent-dark); }
 
 @media (min-width: 760px) {
   .card-grid { grid-template-columns: repeat(3, 1fr); }
-  .card-btn { width: auto; align-self: flex-start; }
+
+  .card-grid .card { height: 100%; }
+
+  .card-action .card-btn {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    width: 100%;
+    align-self: stretch;
+  }
+
+  /* Outline secondary pairs with the solid accent discovery button */
+  .card-action .btn-primary.card-btn {
+    background: transparent;
+    color: var(--navy-800);
+    border-color: var(--navy-800);
+  }
+
+  .card-action .btn-primary.card-btn:hover {
+    background: var(--navy-800);
+    color: var(--white);
+  }
 }
 
 /* ---------- Mid-page CTA bar ---------- */
