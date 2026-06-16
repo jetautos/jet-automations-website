@@ -36,6 +36,34 @@ heroPhoto.onload = () => {
 };
 heroPhoto.src = 'assets/pleasanton-airport.webp';
 
+// Mobile floating CTA: show after the hero, hide again at the contact form
+const mobileCta = document.getElementById('mobile-cta');
+const heroSection = document.querySelector('.hero');
+const contactSection = document.getElementById('contact');
+
+if (mobileCta && heroSection) {
+  let pastHero = false;
+  let atContact = false;
+
+  function updateMobileCta() {
+    const show = pastHero && !atContact;
+    mobileCta.classList.toggle('is-visible', show);
+    mobileCta.setAttribute('aria-hidden', String(!show));
+  }
+
+  new IntersectionObserver(([entry]) => {
+    pastHero = !entry.isIntersecting;
+    updateMobileCta();
+  }, { threshold: 0 }).observe(heroSection);
+
+  if (contactSection) {
+    new IntersectionObserver(([entry]) => {
+      atContact = entry.isIntersecting;
+      updateMobileCta();
+    }, { threshold: 0.15 }).observe(contactSection);
+  }
+}
+
 // Guard: while the form action still holds the placeholder, block submission
 // so the live site never POSTs nowhere. This disables itself automatically
 // once the real Salesforce Web-to-Lead action URL is in place.
