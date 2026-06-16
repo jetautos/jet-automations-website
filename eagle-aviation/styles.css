@@ -118,9 +118,8 @@ a:hover { color: var(--accent-dark); }
 }
 
 .brand-mark {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: var(--accent);
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
 }
 
