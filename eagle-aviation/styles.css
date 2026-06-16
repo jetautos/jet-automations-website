@@ -511,6 +511,54 @@ a:hover { color: var(--accent-dark); }
   .about-grid { grid-template-columns: 1.1fr 1fr; align-items: start; }
 }
 
+/* ---------- Instructor ---------- */
+
+.instructor-card {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  background: var(--paper);
+  border: 1px solid #e3e9ef;
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.instructor-photo { margin: 0; }
+
+.instructor-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.instructor-body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.instructor-role {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 1rem;
+}
+
+.instructor-body > p:not(.instructor-role) { color: var(--slate-600); }
+.instructor-body p:last-child { margin-bottom: 0; }
+
+@media (min-width: 760px) {
+  .instructor-card {
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+  }
+}
+
 /* ---------- Lead form ---------- */
 
 .section-contact {
