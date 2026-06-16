@@ -124,6 +124,12 @@ a:hover { color: var(--accent-dark); }
   flex-shrink: 0;
 }
 
+.brand-mark--eagle {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
 .nav-toggle {
   display: flex;
   flex-direction: column;
