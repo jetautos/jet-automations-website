@@ -36,25 +36,35 @@ heroPhoto.onload = () => {
 };
 heroPhoto.src = 'assets/pleasanton-airport.webp';
 
-// Mobile floating CTA: show after the hero, hide again at the contact form
+// Mobile floating CTA: show only when every other Discovery Flight button
+// has scrolled off screen; hide again at the contact form.
 const mobileCta = document.getElementById('mobile-cta');
-const heroSection = document.querySelector('.hero');
 const contactSection = document.getElementById('contact');
 
-if (mobileCta && heroSection) {
-  let pastHero = false;
+if (mobileCta) {
+  const discoveryCtas = Array.from(
+    document.querySelectorAll('a[data-interest="Discovery Flight"]')
+  ).filter((link) => !mobileCta.contains(link));
+
+  const visibleCtas = new Set();
   let atContact = false;
 
   function updateMobileCta() {
-    const show = pastHero && !atContact;
+    const show = visibleCtas.size === 0 && !atContact;
     mobileCta.classList.toggle('is-visible', show);
     mobileCta.setAttribute('aria-hidden', String(!show));
   }
 
-  new IntersectionObserver(([entry]) => {
-    pastHero = !entry.isIntersecting;
-    updateMobileCta();
-  }, { threshold: 0 }).observe(heroSection);
+  discoveryCtas.forEach((cta) => {
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        visibleCtas.add(cta);
+      } else {
+        visibleCtas.delete(cta);
+      }
+      updateMobileCta();
+    }, { threshold: 0 }).observe(cta);
+  });
 
   if (contactSection) {
     new IntersectionObserver(([entry]) => {
