@@ -324,27 +324,11 @@
           back to you to talk through next steps.
         </p>
 
-        <!-- ================================================================
-             SALESFORCE WEB-TO-LEAD: replace action + input names here
-             ================================================================
-             1. In Salesforce: Setup → Web-to-Lead → generate the HTML.
-             2. Replace this form's `action` with the Salesforce servlet URL
-                (https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8).
-             3. Add the hidden `oid` input from the generated HTML.
-             4. Replace each input/select `name` below with the matching
-                Salesforce field name (first_name, last_name, email, phone,
-                description, and the generated ID for the interest picklist).
-             5. Set the hidden lead_source value (and optionally a retURL
-                hidden input pointing at a thank-you anchor or page).
-             6. The JS guard in script.js disables submission automatically
-                while the action still contains "REPLACE_WITH" — no need to
-                remove anything once the real action is in place.
-             ================================================================ -->
-        <form id="lead-form" class="lead-form" action="REPLACE_WITH_SALESFORCE_WEB_TO_LEAD_URL" method="POST">
-          <!-- Hidden lead source placeholder — set to your Salesforce value -->
-          <input type="hidden" name="lead_source" value="Eagle Aviation Website">
-          <!-- <input type="hidden" name="oid" value="REPLACE_WITH_SALESFORCE_ORG_ID"> -->
-          <!-- <input type="hidden" name="retURL" value="REPLACE_WITH_THANK_YOU_URL"> -->
+        <form id="lead-form" class="lead-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+          <input type="hidden" name="oid" value="00Dal00001TJcl7EAD">
+          <input type="hidden" name="retURL" id="retURL" value="https://eagle-aviation.pages.dev/thank-you.html">
+          <input type="hidden" name="lead_source" value="Web">
+          <input type="hidden" name="company" value="Prospective Student">
 
           <div class="form-row">
             <div class="form-field">
@@ -370,7 +354,7 @@
 
           <div class="form-field">
             <label for="interest">I'm interested in</label>
-            <select id="interest" name="interest">
+            <select id="interest" name="00Nal00001LPxQ5">
               <option value="Flight Training" selected>Flight Training</option>
               <option value="Discovery Flight">Discovery Flight</option>
               <option value="VMAX Program">VMAX Program</option>

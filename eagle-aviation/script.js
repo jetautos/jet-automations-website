@@ -74,16 +74,8 @@ if (mobileCta) {
   }
 }
 
-// Guard: while the form action still holds the placeholder, block submission
-// so the live site never POSTs nowhere. This disables itself automatically
-// once the real Salesforce Web-to-Lead action URL is in place.
-const leadForm = document.getElementById('lead-form');
-const formStatus = document.querySelector('.form-status');
-
-leadForm.addEventListener('submit', (event) => {
-  if (leadForm.getAttribute('action').includes('REPLACE_WITH')) {
-    event.preventDefault();
-    formStatus.textContent =
-      'This form is not connected yet. Please check back soon.';
-  }
-});
+// Point the thank-you redirect at this site's origin (pages.dev or custom domain).
+const retUrlField = document.getElementById('retURL');
+if (retUrlField) {
+  retUrlField.value = `${window.location.origin}/thank-you.html`;
+}
