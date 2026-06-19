@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /design-studio/
+Disallow: /thank-you.html
+
+Sitemap: https://www.eagleaviationhq.com/sitemap.xml
