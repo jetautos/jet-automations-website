@@ -31,23 +31,26 @@ if (interestSelect) {
 }
 
 // Open directions in the native maps app (Apple Maps on iOS, geo: on Android, Google Maps on desktop).
+// FAA airport reference point for KPEZ (28-57-15.1N 098-31-11.9W).
 const MAPS_DESTINATION = {
-  lat: 28.9569,
-  lng: -98.5247,
+  lat: 28.954194,
+  lng: -98.519972,
   label: 'Pleasanton Municipal Airport (KPEZ)',
-  google: 'https://www.google.com/maps/search/?api=1&query=28.9569,-98.5247',
+  google: 'https://www.google.com/maps/search/?api=1&query=28.954194,-98.519972',
 };
 
 function openMaps(event) {
   event.preventDefault();
   const { lat, lng, label, google } = MAPS_DESTINATION;
+  const coords = `${lat},${lng}`;
   const encoded = encodeURIComponent(label);
   const ua = navigator.userAgent;
 
   if (/iPhone|iPad|iPod/i.test(ua)) {
-    window.location.assign(`https://maps.apple.com/?q=${encoded}&ll=${lat},${lng}`);
+    // Coordinate-based q pins the airport; a text search can geocode slightly off-field.
+    window.location.assign(`https://maps.apple.com/?ll=${coords}&q=${coords}`);
   } else if (/Android/i.test(ua)) {
-    window.location.assign(`geo:${lat},${lng}?q=${encoded}`);
+    window.location.assign(`geo:${coords}?q=${encoded}`);
   } else {
     window.open(google, '_blank', 'noopener,noreferrer');
   }
