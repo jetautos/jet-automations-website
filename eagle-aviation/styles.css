@@ -988,6 +988,23 @@ a:hover { color: var(--accent-dark); }
   max-width: 40rem;
 }
 
+.contact-notice {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--paper);
+  border: 1px solid #e3e9ef;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  max-width: 40rem;
+}
+
+.contact-notice p {
+  margin: 0;
+  color: var(--navy-800);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
 .contact-map-wrap {
   position: relative;
   border-radius: var(--radius);
