@@ -30,21 +30,58 @@ if (interestSelect) {
   });
 }
 
-// Contact page: geo: links open the device maps app on mobile; desktop falls back to Google Maps.
-function bindMapsLinks(selector) {
-  document.querySelectorAll(selector).forEach((link) => {
-    link.addEventListener('click', (event) => {
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      const fallback = link.dataset.mapsFallback;
-      if (!isMobile && fallback) {
-        event.preventDefault();
-        window.open(fallback, '_blank', 'noopener,noreferrer');
-      }
-    });
-  });
+// Open directions in the native maps app (Apple Maps on iOS, geo: on Android, Google Maps on desktop).
+const MAPS_DESTINATION = {
+  lat: 28.9569,
+  lng: -98.5247,
+  label: 'Pleasanton Municipal Airport (KPEZ)',
+  google: 'https://www.google.com/maps/search/?api=1&query=28.9569,-98.5247',
+};
+
+function openMaps(event) {
+  event.preventDefault();
+  const { lat, lng, label, google } = MAPS_DESTINATION;
+  const encoded = encodeURIComponent(label);
+  const ua = navigator.userAgent;
+
+  if (/iPhone|iPad|iPod/i.test(ua)) {
+    window.location.assign(`https://maps.apple.com/?q=${encoded}&ll=${lat},${lng}`);
+  } else if (/Android/i.test(ua)) {
+    window.location.assign(`geo:${lat},${lng}?q=${encoded}`);
+  } else {
+    window.open(google, '_blank', 'noopener,noreferrer');
+  }
 }
 
-bindMapsLinks('#open-maps, #open-maps-overlay, .contact-card--maps');
+document.querySelectorAll('.js-open-maps').forEach((link) => {
+  link.addEventListener('click', openMaps);
+});
+
+// Scroll to the lead form — fixes Cloudflare stripping hash on index.html#contact redirects.
+function scrollToContact() {
+  const section = document.getElementById('contact');
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+document.querySelectorAll('a[href="#contact"], a[href="/#contact"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const onHome = document.getElementById('contact');
+    if (onHome) {
+      event.preventDefault();
+      history.pushState(null, '', '#contact');
+      scrollToContact();
+    }
+  });
+});
+
+if (window.location.hash === '#contact' && document.getElementById('contact')) {
+  requestAnimationFrame(scrollToContact);
+  window.addEventListener('load', () => {
+    requestAnimationFrame(scrollToContact);
+  });
+}
 
 // Hero photo: if assets/pleasanton-airport.webp exists, use it as the hero
 // background (styled in styles.css); otherwise the SVG runway scene stays.
