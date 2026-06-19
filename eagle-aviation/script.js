@@ -22,11 +22,29 @@ siteNav.addEventListener('click', (event) => {
 // e.g. "Book a Discovery Flight" and the VMAX inquiry link.
 const interestSelect = document.getElementById('interest');
 
-document.querySelectorAll('a[data-interest]').forEach((link) => {
-  link.addEventListener('click', () => {
-    interestSelect.value = link.dataset.interest;
+if (interestSelect) {
+  document.querySelectorAll('a[data-interest]').forEach((link) => {
+    link.addEventListener('click', () => {
+      interestSelect.value = link.dataset.interest;
+    });
   });
-});
+}
+
+// Contact page: geo: links open the device maps app on mobile; desktop falls back to Google Maps.
+function bindMapsLinks(selector) {
+  document.querySelectorAll(selector).forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const fallback = link.dataset.mapsFallback;
+      if (!isMobile && fallback) {
+        event.preventDefault();
+        window.open(fallback, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
+}
+
+bindMapsLinks('#open-maps, #open-maps-overlay, .contact-card--maps');
 
 // Hero photo: if assets/pleasanton-airport.webp exists, use it as the hero
 // background (styled in styles.css); otherwise the SVG runway scene stays.
