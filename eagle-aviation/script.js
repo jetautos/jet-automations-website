@@ -31,26 +31,22 @@ if (interestSelect) {
 }
 
 // Open directions in the native maps app (Apple Maps on iOS, geo: on Android, Google Maps on desktop).
-// FAA airport reference point for KPEZ (28-57-15.1N 098-31-11.9W).
 const MAPS_DESTINATION = {
-  lat: 28.954194,
-  lng: -98.519972,
+  address: '340 Airport Rd, Pleasanton, TX 78064',
   label: 'Pleasanton Municipal Airport (KPEZ)',
-  google: 'https://www.google.com/maps/search/?api=1&query=28.954194,-98.519972',
 };
 
 function openMaps(event) {
   event.preventDefault();
-  const { lat, lng, label, google } = MAPS_DESTINATION;
-  const coords = `${lat},${lng}`;
-  const encoded = encodeURIComponent(label);
+  const { address, label } = MAPS_DESTINATION;
+  const encodedAddress = encodeURIComponent(address);
+  const google = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
   const ua = navigator.userAgent;
 
   if (/iPhone|iPad|iPod/i.test(ua)) {
-    // Coordinate-based q pins the airport; a text search can geocode slightly off-field.
-    window.location.assign(`https://maps.apple.com/?ll=${coords}&q=${coords}`);
+    window.location.assign(`https://maps.apple.com/?address=${encodedAddress}`);
   } else if (/Android/i.test(ua)) {
-    window.location.assign(`geo:${coords}?q=${encoded}`);
+    window.location.assign(`geo:0,0?q=${encodedAddress}(${encodeURIComponent(label)})`);
   } else {
     window.open(google, '_blank', 'noopener,noreferrer');
   }
