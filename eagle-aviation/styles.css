@@ -583,6 +583,48 @@ a:hover { color: var(--accent-dark); }
 
 .about-text p:last-child { margin-bottom: 0; }
 
+.founder-portrait {
+  margin: 0 0 1.5rem;
+}
+
+.founder-portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid #e3e9ef;
+}
+
+.founder-portrait figcaption {
+  font-size: 0.85rem;
+  color: var(--slate-600);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.founder-portrait-role {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 879px) {
+  .founder-portrait {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .founder-portrait figcaption {
+    text-align: center;
+  }
+}
+
 .credentials {
   display: grid;
   gap: 1.5rem;
@@ -626,6 +668,28 @@ a:hover { color: var(--accent-dark); }
 
 @media (min-width: 880px) {
   .about-grid { grid-template-columns: 1.1fr 1fr; align-items: start; }
+
+  .about-text {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0 2rem;
+    align-items: start;
+  }
+
+  .founder-portrait {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin-bottom: 0;
+  }
+
+  .about-text > p:nth-child(2),
+  .about-text > p:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .about-text > p:nth-child(n+4) {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ---------- Instructor ---------- */
