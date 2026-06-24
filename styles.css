@@ -209,6 +209,31 @@ a { color: var(--rust-deep); }
   margin-top: 1.7rem;
 }
 
+/* ---------- Credentials ---------- */
+.credentials {
+  padding: 0 0 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.credentials__inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+.credentials__badge {
+  display: block;
+  height: auto;
+  max-width: 220px;
+}
+.credentials__note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  max-width: 22rem;
+  margin: 0;
+}
+
 /* ---------- Sections ---------- */
 .section { padding: 5.5rem 0; }
 .section--paper {
