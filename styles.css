@@ -189,6 +189,18 @@ a { color: var(--rust-deep); }
   flex-wrap: wrap;
   gap: 1.2rem;
 }
+.hero__email {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.hero__email:hover {
+  color: var(--rust-deep);
+  border-color: var(--rust);
+}
 .hero__trust {
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -413,6 +425,103 @@ a { color: var(--rust-deep); }
   .site-nav__menu.is-open { display: flex; }
   .hero { padding: 4rem 0 5rem; }
   .section { padding: 4rem 0; }
+}
+
+/* ---------- Book page ---------- */
+.book-page {
+  padding: 4.5rem 0 5rem;
+}
+.book-page__title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  max-width: 20ch;
+  margin-bottom: 1rem;
+}
+.book-page__lede {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  max-width: 38rem;
+  margin-bottom: 2.5rem;
+}
+.book-page__embed {
+  min-height: 620px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.book-page__embed .meetings-iframe-container,
+.book-page__embed .calendly-inline-widget {
+  width: 100%;
+  min-height: 620px;
+}
+.book-page__fallback {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2rem;
+  background: var(--paper);
+}
+.book-page__fallback-note {
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+.book-page__contact-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.book-page__card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  background: var(--cream);
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+.book-page__card:hover {
+  border-color: var(--rust);
+  transform: translateY(-1px);
+}
+.book-page__card-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--rust);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.book-page__card-value {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+.book-page__fine {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.book-page__fine strong {
+  color: var(--ink);
+}
+.footer--compact {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+.footer--compact .footer__info {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.process-note strong {
+  color: var(--rust-deep);
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .book-page__contact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* ---------- Reduced motion ---------- */
