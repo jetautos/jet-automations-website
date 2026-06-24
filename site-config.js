@@ -7,8 +7,7 @@ window.GRANATO_SITE = {
   phoneTel: "+12109714406",
   linkedIn: "https://www.linkedin.com/in/jadenn-granato-745768265/",
   siteUrl: "https://jadenngranato.com",
-  /* HubSpot Meetings (portal na2). Swap hubspotMeetingUrl when you add Calendly. */
-  hubspotMeetingUrl: "https://meetings-na2.hubspot.com/jadenn-granato",
-  calendlyUrl: null,
+  calendlyUrl: "https://calendly.com/jadenn-jadenngranato",
+  hubspotMeetingUrl: null,
   bookingPath: "/book.html",
 };
