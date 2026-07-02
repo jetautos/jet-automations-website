@@ -106,6 +106,42 @@ Keep tone practical. Clint records outreach well — call that out when activity
 - **Student app:** separate repo `jetautos/eagle-student-app` → https://app.eagleaviationhq.com
 - **Web-to-Lead oid:** `00Dal00001TJcl7EAD`
 
+## Calendar events (flights / lessons)
+
+Salesforce **Tasks** do not appear on the Calendar or student app schedule. Use **Events** with `StartDateTime`, `EndDateTime`, `WhoId` (Lead or Contact), and `OwnerId`.
+
+### Schedule standard discovery flights
+
+After org auth is available, run:
+
+```bash
+.cursor/scripts/schedule-eagle-flights.sh
+```
+
+Or with auth URL in env (Cloud Agent secret `SFDX_AUTH_URL`):
+
+```bash
+SFDX_AUTH_URL='force://...' .cursor/scripts/schedule-eagle-flights.sh
+```
+
+**Currently configured flights:**
+
+| Person | Record | Type | When (Central) |
+|--------|--------|------|----------------|
+| Penny Golden | Lead `00Qal00000dqmmrEAA` | Discovery Flight | Jul 4, 2026 @ 10:00 AM |
+| Isaac Correa | Contact `003al00000oapmVAAQ` | Flight Lesson | Jul 5, 2026 @ 10:00 AM |
+
+Both assign to **Clint Powell**, location **KPEZ**, 90-minute block.
+
+### Manual event create (one-off)
+
+```bash
+sf data create record --target-org eagle-aviation --sobject Event \
+  --values "Subject='Discovery Flight - Name' WhoId='00Q...' OwnerId='005...' StartDateTime=2026-07-04T15:00:00.000+0000 EndDateTime=2026-07-04T16:30:00.000+0000 Location='KPEZ'"
+```
+
+Query Clint's User Id: `SELECT Id FROM User WHERE Name = 'Clint Powell' LIMIT 1`
+
 ## Do not
 
 - Confuse EA marketing site leads with **Daedalians** org (`daedalians-readonly`) or other orgs
