@@ -7,12 +7,13 @@ SF="${SF:-/workspace/.tools/node_modules/.bin/sf}"
 ORG="${ORG:-eagle-aviation}"
 
 if ! "$SF" org list --all 2>/dev/null | grep -q "$ORG"; then
-  if [[ -n "${SFDX_AUTH_URL:-}" ]]; then
-    echo "Authenticating to $ORG from SFDX_AUTH_URL..."
-    printf '%s' "$SFDX_AUTH_URL" | "$SF" org login sfdx-url \
+  auth_url="${SFDX_AUTH_URL:-${SF_AUTH_URL:-${EAGLE_AVIATION_SF_AUTH:-${SALESFORCE_AUTH_URL:-}}}}"
+  if [[ -n "$auth_url" ]]; then
+    echo "Authenticating to $ORG from environment auth URL..."
+    printf '%s' "$auth_url" | "$SF" org login sfdx-url \
       --sfdx-url-stdin --alias "$ORG" --set-default
   else
-    echo "No org auth for '$ORG'. Set SFDX_AUTH_URL or run:"
+    echo "No org auth for '$ORG'. Set SFDX_AUTH_URL (Cloud Agent secret) or run:"
     echo "  sf org login sfdx-url --alias $ORG --set-default"
     exit 1
   fi
