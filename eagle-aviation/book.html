@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Discovery Flight | Eagle Aviation | Pleasanton, TX</title>
+  <meta name="description" content="Pick a time for your $195 discovery flight in our Cessna 150 at Pleasanton Municipal Airport (KPEZ). Gas included.">
+  <link rel="canonical" href="https://www.eagleaviationhq.com/book">
+  <meta name="theme-color" content="#1B3A5C">
+  <link rel="icon" href="assets/logo-eagle.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="Eagle Aviation, home">
+        <img class="brand-mark brand-mark--eagle" src="assets/logo-eagle.png" alt="" width="48" height="48" aria-hidden="true">
+        <span>Eagle Aviation</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a href="/#training">Training</a>
+        <a href="/student-pilot-resources-pleasanton-tx">Resources</a>
+        <a href="/flight-reviews">Flight Reviews</a>
+        <a href="/#airport">Airport</a>
+        <a href="/#about">About</a>
+        <a href="/#vmax">VMAX</a>
+        <a href="/contact">Contact</a>
+        <a href="/#contact" class="btn btn-primary btn-nav" data-interest="Discovery Flight">Book Discovery Flight</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="book-page">
+    <section class="book-hero">
+      <div class="container container-narrow">
+        <p class="kicker">Cessna 150 &middot; KPEZ &middot; $195 (gas included)</p>
+        <h1>Book your discovery flight</h1>
+        <p class="book-hero-lead">
+          Choose an open time (7am&ndash;9pm Central), enter your info, and pay $195 securely
+          on Stripe. Your slot is booked on our calendar as soon as payment goes through.
+        </p>
+      </div>
+    </section>
+
+    <section class="book-calendar-section">
+      <div class="container container-narrow">
+        <div class="book-calendar">
+          <div class="book-calendar__header">
+            <button type="button" class="book-calendar__arrow" id="book-prev-month" aria-label="Previous month">&larr;</button>
+            <h2 class="book-calendar__month" id="book-month-label">Month</h2>
+            <button type="button" class="book-calendar__arrow" id="book-next-month" aria-label="Next month">&rarr;</button>
+          </div>
+          <div class="book-calendar__dow" aria-hidden="true">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="book-calendar__grid" id="book-calendar-grid" aria-label="Choose a date"></div>
+        </div>
+
+        <div class="book-slots" id="book-slots-panel" hidden>
+          <h3 id="book-slots-title">Available times</h3>
+          <p class="book-slots__meta" id="book-slots-meta"></p>
+          <div class="book-slots__list" id="book-slots-list"></div>
+        </div>
+
+        <p class="book-status" id="book-status" role="status" aria-live="polite"></p>
+
+        <div class="book-selected" id="book-selected" hidden>
+          <h3>Complete your booking</h3>
+          <p id="book-selected-summary"></p>
+          <form id="book-reserve-form" class="book-reserve-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="book-first-name">First name</label>
+                <input type="text" id="book-first-name" name="firstName" autocomplete="given-name" required>
+              </div>
+              <div class="form-field">
+                <label for="book-last-name">Last name</label>
+                <input type="text" id="book-last-name" name="lastName" autocomplete="family-name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="book-email">Email</label>
+                <input type="email" id="book-email" name="email" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="book-phone">Phone</label>
+                <input type="tel" id="book-phone" name="phone" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="book-notes">Questions or notes (optional)</label>
+              <textarea id="book-notes" name="notes" rows="3" placeholder="First time at KPEZ? Any scheduling preferences?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent btn-submit" id="book-reserve-btn">Pay $195 &amp; book</button>
+            <p class="book-reserve-fine">$195 discovery flight &middot; gas included &middot; secure payment via Stripe</p>
+          </form>
+        </div>
+
+        <div class="book-confirmed" id="book-confirmed" hidden>
+          <h3>You&rsquo;re booked and paid</h3>
+          <p id="book-confirmed-summary"></p>
+          <p>Check your inbox for a confirmation email. Bring a driver&rsquo;s license and birth certificate, or your passport, so your discovery flight counts as a training hour. Questions? Call <a href="tel:+18305709790">(830) 570-9790</a>.</p>
+          <a href="/book" class="btn btn-primary">Book another time</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="brand-mark brand-mark--eagle" src="assets/logo-eagle.png" alt="" width="48" height="48" aria-hidden="true">
+        <span>Eagle Aviation Flight School</span>
+      </div>
+      <div class="footer-info">
+        <p>
+          <a href="tel:+18305709790">(830) 570-9790</a> &middot;
+          <a href="mailto:contact@eagleaviationhq.com">contact@eagleaviationhq.com</a>
+        </p>
+        <p>Pleasanton Municipal Airport (KPEZ) &middot; <a href="/contact">Directions &amp; contact</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/#training">Training</a>
+        <a href="/#airport">Airport</a>
+        <a href="/#about">About</a>
+        <a href="/#vmax">VMAX</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <p class="footer-legal">&copy; 2026 Eagle Aviation Flight School &middot; Veteran-Owned &middot; Pleasanton Municipal Airport (KPEZ), Pleasanton, Texas</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="book.js"></script>
+</body>
+</html>
