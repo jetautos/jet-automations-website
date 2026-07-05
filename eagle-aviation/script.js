@@ -18,18 +18,6 @@ siteNav.addEventListener('click', (event) => {
   }
 });
 
-// Links with data-interest preselect the form's interest dropdown,
-// e.g. "Book a Discovery Flight" and the VMAX inquiry link.
-const interestSelect = document.getElementById('interest');
-
-if (interestSelect) {
-  document.querySelectorAll('a[data-interest]').forEach((link) => {
-    link.addEventListener('click', () => {
-      interestSelect.value = link.dataset.interest;
-    });
-  });
-}
-
 // Open directions in the native maps app (Apple Maps on iOS, geo: on Android, Google Maps on desktop).
 const MAPS_DESTINATION = {
   address: '340 Airport Rd, Pleasanton, TX 78064',
@@ -56,31 +44,19 @@ document.querySelectorAll('.js-open-maps').forEach((link) => {
   link.addEventListener('click', openMaps);
 });
 
-// Scroll to the lead form — fixes Cloudflare stripping hash on index.html#contact redirects.
-function scrollToContact() {
-  const section = document.getElementById('contact');
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-
+// Generic contact links without data-interest (cta-interest.js handles the rest).
 document.querySelectorAll('a[href="#contact"], a[href="/#contact"]').forEach((link) => {
+  if (link.dataset.interest) return;
+
   link.addEventListener('click', (event) => {
     const onHome = document.getElementById('contact');
     if (onHome) {
       event.preventDefault();
       history.pushState(null, '', '#contact');
-      scrollToContact();
+      onHome.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
-
-if (window.location.hash === '#contact' && document.getElementById('contact')) {
-  requestAnimationFrame(scrollToContact);
-  window.addEventListener('load', () => {
-    requestAnimationFrame(scrollToContact);
-  });
-}
 
 // Hero photo: if assets/pleasanton-airport.webp exists, use it as the hero
 // background (styled in styles.css); otherwise the SVG runway scene stays.
